@@ -460,6 +460,7 @@ void ImGuiRenderer::RenderViewport(OpenGLContext& context, unsigned int fps)
 			context.Resize((unsigned int)RenderDimensions.x, (unsigned int)RenderDimensions.y);
 			camera->changeAspectRatio(RenderDimensions.x / RenderDimensions.y);
 			old_viewport_dimensions = RenderDimensions;
+			context.frame_count = 0;
 		}
 
 		//std::cout << camera->getFront().x << std::endl;
